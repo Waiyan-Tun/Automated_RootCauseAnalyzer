@@ -343,3 +343,22 @@ The application follows a modular design to separate concerns and maintain respo
   - Check Matplotlib backend (`Agg`) for chart rendering.
 - **Auto-Run Fails**:
   - Validate `app_config.json` for complete settings.
+
+## Author
+
+**Name:** Waiyan Htun
+**Role:** Developer / Analyst
+**University:** Rangsit University International Program
+**Email:** [waiyansanchez2000@gmail.com](mailto:waiyansanchez2000@gmail.com)
+**Portfolio:** [https://github.com/<your-username>](https://github.com/Waiyan-Tun)
+
+---
+
+## ⚖️ License
+
+This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
+
+```
+MIT License © 2025 Waiyan Htun
+```
+
