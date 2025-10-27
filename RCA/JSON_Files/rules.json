@@ -1,0 +1,587 @@
+
+  {
+  "Station_1": {
+    "models": {
+      "ALL MODELS":{
+        "rules":[
+            {
+              "feature": "Model",
+                "EX_1":{"feature": "Voltage_Test",
+            "fail": {"Prediction": "NG"},
+            "pass": {
+              "feature": "Analog_Test",
+              "fail": {"Prediction": "NG"},
+              "pass": {
+                "feature": "Current Test",
+                "fail": {"Prediction": "NG"},
+                "pass": {
+                  "feature": "BAT_Test",
+                  "fail": {"Prediction": "NG"},
+                  "pass": {"Prediction": "OK"}
+                }
+              }
+            }},
+                "EX_2":{"feature": "Analog_Test",
+            "fail": {"Prediction": "NG"},
+            "pass": {
+              "feature": "Current Test",
+              "fail": {"Prediction": "NG"},
+              "pass": {
+                "feature": "BAT_Test",
+                "fail": {"Prediction": "NG"},
+                "pass": {
+                  "feature": "Voltage_Test",
+                  "Disable": {"Prediction": "OK"},
+                  "fail": {"Prediction": "NG"},
+                  "pass": {"Prediction": "OK"}
+                }
+              }
+            }},
+                "EX_3":{ "feature": "Analog_Test",
+            "fail": {"Prediction": "NG"},
+            "pass": {
+              "feature": "Current Test",
+              "fail": {"Prediction": "NG"},
+              "pass": {
+                "feature": "Voltage_Test",
+                "fail": {"Prediction": "NG"},
+                "pass": {"Prediction": "OK"}
+              }
+            }},
+                "EX_4":{"feature": "Analog_Test",
+            "fail": {"Prediction": "NG"},
+            "pass": {
+              "feature": "Voltage_Test",
+              "fail": {"Prediction": "NG"},
+              "pass": {
+                "feature": "Current Test",
+                "fail": {"Prediction": "NG"},
+                "pass": {
+                  "feature": "BAT_Test",
+                  "fail": {"Prediction": "NG"},
+                  "pass": {"Prediction": "OK"}
+                }
+              }
+            }},
+                "EX_5":{"feature": "Analog_Test",
+            "fail": {"Prediction": "NG"},
+            "pass": {
+              "feature": "Current Test",
+              "fail": {"Prediction": "NG"},
+              "pass": {
+                "feature": "Voltage_Test",
+                "Disable": {"Prediction": "OK"},
+                "fail": {"Prediction": "NG"},
+                "pass": {"Prediction": "OK"}
+              }
+            }},
+                "EX_6":{"feature": "Voltage_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 251},
+            "pass": {
+              "feature": "Current Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+              "pass": {"Prediction": "OK", "OK": 12632, "NG": 1}
+            }}
+              }
+            ]
+            }
+    }
+  },
+
+
+  "Station_2": {
+    "models": {
+      "ALL MODELS":{
+        "rules":[
+            {
+                "feature": "Model",
+                "EX_1":{"feature": "Button_1_Force_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 305},
+            "pass": {
+              "feature": "Button_1_Tactile_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 156},
+              "pass": {
+                "feature": "Button_2_Connection_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 134},
+                "pass": {
+                  "feature": "Button_3_Connection_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 85},
+                  "pass": {
+                    "feature": "Button_3_Tactile_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 48},
+                    "pass": {
+                      "feature": "Button_4_Connection_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 38},
+                      "pass": {
+                        "feature": "Button_4_Tactile_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 23},
+                        "pass": {
+                          "feature": "Button_3_Force_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 20},
+                          "pass": {
+                            "feature": "Button_1_Connection_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 19},
+                            "pass": {"Prediction": "OK", "OK": 17780, "NG": 7}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_2":{"feature": "Button_4_Tactile_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 1712},
+            "pass": {
+              "feature": "Button_2_Connection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 1279},
+              "pass": {
+                "feature": "Button_1_Tactile_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 619},
+                "pass": {
+                  "feature": "Button_3_Connection_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 557},
+                  "pass": {
+                    "feature": "Button_1_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 445},
+                    "pass": {
+                      "feature": "Button_3_Tactile_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 249},
+                      "pass": {
+                        "feature": "Button_4_Connection_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 118},
+                        "pass": {
+                          "feature": "Button_3_Force_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 59},
+                          "pass": {
+                            "feature": "Button_1_Force_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 59},
+                            "pass": {
+                              "feature": "Button_1_From_Froce_Test",
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 29},
+                              "pass": {
+                                "feature": "Button_4_Tactile_Test",
+                                "fail": {"Prediction": "NG", "OK": 0, "NG": 7},
+                                "pass": {
+                                  "feature": "Button_4_From_Froce_Test",
+                                  "fail": {"Prediction": "NG", "OK": 0, "NG": 5},
+                                  "pass": {
+                                    "feature": "Button_1_From_Froce_Test",
+                                    "fail": {"Prediction": "NG", "OK": 0, "NG": 5},
+                                    "pass": {
+                                      "feature": "Button_3_From_Froce_Test",
+                                      "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                                      "pass": {"Prediction": "OK", "OK": 158748, "NG": 7}
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_3":{"feature": "Button_1_Force_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 56},
+            "pass": {
+              "feature": "Button_2_Connection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 49},
+              "pass": {
+                "feature": "Button_3_Force_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 35},
+                "pass": {
+                  "feature": "Button_3_Connection_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 27},
+                  "pass": {
+                    "feature": "Button_4_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 25},
+                    "pass": {
+                      "feature": "Button_1_Tactile_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 20},
+                      "pass": {
+                        "feature": "Button_3_Tactile_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 16},
+                        "pass": {
+                          "feature": "Button_4_Tactile_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 12},
+                          "pass": {
+                            "feature": "Button_2_From_Froce_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 11},
+                            "pass": {
+                              "feature": "Button_1_Connection_Test",
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 8},
+                              "pass": {
+                                "feature": "Button_1_From_Froce_Test",
+                                "fail": {"Prediction": "NG", "OK": 0, "NG": 4},
+                                "pass": {
+                                  "feature": "Button_3_From_Froce_Test",
+                                  "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                                  "pass": {"Prediction": "OK", "OK": 7743, "NG": 1}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_4":{"feature": "Button_2_Connection_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 281},
+            "pass": {
+              "feature": "Button_4_Tactile_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 225},
+              "pass": {
+                "feature": "Button_4_Connection_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 232},
+                "pass": {
+                  "feature": "Button_3_Force_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 154},
+                  "pass": {
+                    "feature": "Button_3_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 102},
+                    "pass": {
+                      "feature": "Button_1_Connection_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 60},
+                      "pass": {
+                        "feature": "Button_3_Tactile_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 42},
+                        "pass": {
+                          "feature": "Button_1_Tactile_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 39},
+                          "pass": {
+                            "feature": "Button_1_Force_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 28},
+                            "pass": {"Prediction": "OK", "OK": 29690, "NG": 2}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_5":{"feature": "Button_2_Connection_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 85},
+            "pass": {
+              "feature": "Button_1_From_Froce_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 50},
+              "pass": {
+                "feature": "Button_4_Tactile_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 47},
+                "pass": {
+                  "feature": "Button_1_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 27},
+                  "pass": {
+                    "feature": "Button_3_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 24},
+                    "pass": {
+                      "feature": "Button_3_Force_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 9},
+                      "pass": {
+                        "feature": "Button_1_Force_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 9},
+                        "pass": {
+                          "feature": "Button_4_Tactile_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 7},
+                          "pass": {"Prediction": "OK", "OK": 13959, "NG": 2}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_6":{"feature": "Button_4_Tactile_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 193},
+            "pass": {
+              "feature": "Button_2_From_Froce_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 136},
+              "pass": {
+                "feature": "Button_2_Connection_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 107},
+                "pass": {
+                  "feature": "Button_3_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 58},
+                  "pass": {
+                    "feature": "Button_3_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 31},
+                    "pass": {
+                      "feature": "Button_1_From_Froce_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 21},
+                      "pass": {
+                        "feature": "Button_1_From_Froce_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 10},
+                        "pass": {
+                          "feature": "B4_S2 from Force Judge",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 4},
+                          "pass": {
+                            "feature": "Button_4_Connection_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                            "pass": {
+                              "feature": "Button_6_Tactile_Test",
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                              "pass": {
+                                "feature": "Button_4_From_Froce_Test",
+                                "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                                "pass": {
+                                  "feature": "Button_3_Connection_Test",
+                                  "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                                  "pass": {"Prediction": "OK", "OK": 12583, "NG": 5}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }}
+              }
+            ]
+            
+
+  }
+    }
+  },
+
+  "Station_3": {
+    "models": {
+      "ALL MODELS":{
+        "rules":[
+            {
+                "feature": "Model",
+                "EX_1":{"feature": "Button_2_Force_4_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 84},
+            "pass": {
+              "feature": "Button_5_Conection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 43},
+              "pass": {
+                "feature": "Button_5_Force_2_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 16},
+                "pass": {
+                  "feature": "Button_5_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 11},
+                  "pass": {
+                    "feature": "Button_3_Tactile_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 6},
+                    "pass": {
+                      "feature": "Button_1_From_Froce_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 5},
+                      "pass": {
+                        "feature": "Button_3_Force_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                        "pass": {
+                          "feature": "Button_1_Force_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                          "pass": {
+                            "feature": "Button_6_Tactile_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                            "pass": {
+                              "feature": "Button_5_Force_4_Test",
+                              "Disable": {"Prediction": "OK", "OK": 5159, "NG": 0},
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 173},
+                              "pass": {"Prediction": "OK", "OK": 13103, "NG": 3}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_2":{"feature": "Button_2_Force_4_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 917},
+            "pass": {
+              "feature": "Button_2_Connection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 144},
+              "pass": {
+                "feature": "Button_1_From_Froce_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 113},
+                "pass": {
+                  "feature": "Button_3_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 50},
+                  "pass": {
+                    "feature": "Button_6_Tactile_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 42},
+                    "pass": {
+                      "feature": "Button_1_Force_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 39},
+                      "pass": {
+                        "feature": "Button_3_Force_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 31},
+                        "pass": {
+                          "feature": "Button_3_Connection_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 5},
+                          "pass": {
+                            "feature": "Button_2_From_Froce_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                            "pass": {
+                              "feature": "Button_3_Connection_Test",
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                              "pass": {
+                                "feature": "Button_3_Connection_Test",
+                                "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                                "pass": {
+                                  "feature": "Button_4_Tactile_Test",
+                                  "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                                  "pass": {
+                                    "feature": "B4_F4 Judge",
+                                    "Date": {"Prediction": "OK", "OK": 80840, "NG": 1},
+                                    "fail": {"Prediction": "NG", "OK": 0, "NG": 602},
+                                    "pass": {
+                                      "feature": "Button_1_Force_4_Test",
+                                      "fail": {"Prediction": "NG", "OK": 0, "NG": 183},
+                                      "pass": {"Prediction": "OK", "OK": 80877, "NG": 0}
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_3":{"feature": "Button_5_Force_4_Test",
+            "Disable": {
+              "feature": "Button_3_Connection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+              "pass": {
+                "feature": "Button_5_Force_2_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                "pass": {"Prediction": "OK", "OK": 2443, "NG": 1}
+              }
+            },
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 40},
+            "pass": {
+              "feature": "Button_2_Force_4_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 18},
+              "pass": {
+                "feature": "Button_2_Connection_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 5},
+                "pass": {
+                  "feature": "Button_5_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 4},
+                  "pass": {"Prediction": "OK", "OK": 5491, "NG": 2}
+                }
+              }
+            }},
+                "EX_4":{"feature": "Button_2_Connection_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 51},
+            "pass": {
+              "feature": "Button_2_Force_4_Test",
+              "Disable": {
+                "feature": "Button_1_From_Froce_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 17},
+                "pass": {
+                  "feature": "Button_1_Force_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                  "pass": {"Prediction": "OK", "OK": 17241, "NG": 1}
+                }
+              },
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 17},
+              "pass": {
+                "feature": "Button_1_From_Froce_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                "pass": {
+                  "feature": "Button_3_Connection_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                  "pass": {"Prediction": "OK", "OK": 13488, "NG": 4}
+                }
+              }
+            }},
+                "EX_5":{"feature": "Button_2_Force_4_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 39},
+            "pass": {
+              "feature": "Button_5_Tactile_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 33},
+              "pass": {
+                "feature": "Button_1_From_Froce_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 20},
+                "pass": {
+                  "feature": "Button_5_Conection_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 12},
+                  "pass": {
+                    "feature": "Button_4_Connection_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 9},
+                    "pass": {
+                      "feature": "Button_3_Force_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 7},
+                      "pass": {
+                        "feature": "Button_4_Tactile_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 6},
+                        "pass": {
+                          "feature": "Button_3_Tactile_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 4},
+                          "pass": {
+                            "feature": "Button_2_Connection_Test",
+                            "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                            "pass": {
+                              "feature": "Button_3_Connection_Test",
+                              "fail": {"Prediction": "NG", "OK": 0, "NG": 2},
+                              "pass": {
+                                "feature": "Button_5_Force_4_Test",
+                                "Disable": {"Prediction": "OK", "OK": 2153, "NG": 0},
+                                "fail": {"Prediction": "NG", "OK": 0, "NG": 30},
+                                "pass": {"Prediction": "OK", "OK": 11886, "NG": 2}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }},
+                "EX_6":{"feature": "Button_2_Force_4_Test",
+            "fail": {"Prediction": "NG", "OK": 0, "NG": 21},
+            "pass": {
+              "feature": "Button_4_Connection_Test",
+              "fail": {"Prediction": "NG", "OK": 0, "NG": 19},
+              "pass": {
+                "feature": "Button_1_From_Froce_Test",
+                "fail": {"Prediction": "NG", "OK": 0, "NG": 15},
+                "pass": {
+                  "feature": "Button_6_Tactile_Test",
+                  "fail": {"Prediction": "NG", "OK": 0, "NG": 7},
+                  "pass": {
+                    "feature": "Button_4_Tactile_Test",
+                    "fail": {"Prediction": "NG", "OK": 0, "NG": 7},
+                    "pass": {
+                      "feature": "Button_3_Connection_Test",
+                      "fail": {"Prediction": "NG", "OK": 0, "NG": 6},
+                      "pass": {
+                        "feature": "Button_3_Force_Test",
+                        "fail": {"Prediction": "NG", "OK": 0, "NG": 6},
+                        "pass": {
+                          "feature": "Button_3_Tactile_Test",
+                          "fail": {"Prediction": "NG", "OK": 0, "NG": 3},
+                          "pass": {"Prediction": "OK", "OK": 13066, "NG": 2}
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }}
+              }
+            ]
+            
+
+  }
+    }
+  }}
