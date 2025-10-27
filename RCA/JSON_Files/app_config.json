@@ -1,1 +1,25 @@
-
+{
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "password": "",
+    "database": "testdb",
+    "auto_save_path": "/Users/Downloads",
+    "html_filename": "ANALYSIS REPORT",
+    "html_title": "ROOT CAUSE ANALYSIS",
+    "include_week_no": true,
+    "every": 7,
+    "date_setup": "2025/05/12",
+    "auto_run": true,
+    "selected_tables": [
+        "table_1",
+        "table_2",
+        "table_3",
+        "table_4",
+        "table_5",
+        "table_6",
+        "table_7"
+    ],
+    "state": "Auto",
+    "apply_state": true
+}
