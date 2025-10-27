@@ -3,7 +3,7 @@ This is the automated root cause analyzer that can find the root causes of the g
 
 ## Overview
 
-**Automated_RootCauseAnalyzer** is a PyQt5-based graphical user interface (GUI) application designed for connecting to databases (MySQL), retrieving data from selected tables, applying predefined rules for analysis, and generating HTML reports with key performance indicators (KPIs), visualizations, and troubleshooting information. The application supports automated runs based on configuration files and includes features for data filtering, rule-based predictions, root cause analysis, and data export options. It is built to handle large datasets efficiently, with a modular design for maintainability and extensibility.
+**RuleAnalyzerApp** is a PyQt5-based graphical user interface (GUI) application designed for connecting to databases (MySQL or SQLite), retrieving data from selected tables, applying predefined rules for analysis, and generating HTML reports with key performance indicators (KPIs), visualizations, and troubleshooting information. The application supports automated runs based on configuration files and includes features for data filtering, rule-based predictions, root cause analysis, and data export options. It is built to handle large datasets efficiently, with a modular design for maintainability and extensibility.
 
 The app features a tabbed interface for database configuration, data selection, application settings, analysis, and logging. Dialog windows enhance user interaction by providing previews of data and visualizations. It leverages **SQLAlchemy** for database interactions, **Pandas** for data manipulation, and **Matplotlib** for generating charts. Rules and troubleshooting data are loaded from JSON files, ensuring flexibility in defining analysis logic and solutions.
 
@@ -204,6 +204,55 @@ The application follows a modular design to separate concerns and maintain respo
   - Prompts user for auto-run confirmation (with 3-minute timeout).
   - Shows the main window or exits based on user input.
 - **Usage**: Run with `python main.py`.
+
+### 11. `app_config.json`
+**Purpose**: Stores application configuration settings in JSON format.
+
+- **Description**: This file contains persistent settings for the application, loaded and saved via `AppConfigTab`. It includes database connection details, report generation options, date ranges, selected tables, and auto-run flags. The provided content includes dummy data for demonstration.
+- **Structure**:
+  - **host**: Database host (e.g., "localhost").
+  - **port**: Database port (e.g., "3306").
+  - **user**: Database username (e.g., "root").
+  - **password**: Database password (empty in dummy data).
+  - **database**: Database name (e.g., "testdb").
+  - **auto_save_path**: Path for saving HTML reports (e.g., "/Users/Downloads").
+  - **html_filename**: Base filename for HTML reports (e.g., "ANALYSIS REPORT").
+  - **html_title**: Title for HTML reports (e.g., "ROOT CAUSE ANALYSIS").
+  - **include_week_no**: Boolean to append week number to filename and title.
+  - **every**: Number of days back for data retrieval (e.g., 7).
+  - **date_setup**: End date for data retrieval (e.g., "2025/05/12").
+  - **auto_run**: Boolean to enable auto-run mode.
+  - **selected_tables**: Array of table names (e.g., ["table_1", "table_2", ...]).
+  - **state**: State filter (e.g., "Auto").
+  - **apply_state**: Boolean to apply state filter.
+- **Usage**: Loaded at startup to configure auto-run and other settings; saved when configurations are updated.
+
+### 12. `rules.json`
+**Purpose**: Defines analysis rules for stations and models in JSON format.
+
+- **Description**: This file structures rules for different stations (e.g., "Station_1", "Station_2") and models (e.g., "ALL MODELS"). Each rule is a nested dictionary specifying features to check, branches (fail/pass/Disable), and predictions (OK/NG) with optional counts. The provided content includes dummy data with truncated rules for demonstration.
+- **Structure**:
+  - Top-level: Dictionary keyed by station names (e.g., "Station_1").
+  - **models**: Sub-dictionary with model names (e.g., "ALL MODELS").
+  - **rules**: Array of rule objects.
+  - Rule Object:
+    - **feature**: The data column to evaluate (e.g., "Model", "Voltage_Test").
+    - Branches: Keyed by values (e.g., "EX_1", "EX_2") or reserved (fail, pass, Disable), leading to sub-rules or predictions.
+    - **Prediction**: Outcome (e.g., "NG", "OK").
+    - Optional: Counts like "OK": number, "NG": number.
+- **Usage**: Loaded into `AppState.rules` via `load_rules()`; used in analysis to evaluate data rows.
+
+### 13. `troubleshootings.json`
+**Purpose**: Provides troubleshooting methods for features in stations in JSON format.
+
+- **Description**: This file maps stations to features, each with a list of possible problems and solutions. The provided content includes dummy data with repeated "Possible Problem" and "Solution" entries, some truncated for demonstration.
+- **Structure**:
+  - Top-level: Dictionary keyed by station names (e.g., "Station_1", "Station_2").
+  - Feature Sub-dictionary: Keyed by feature names (e.g., "Voltage_Test", "Button_1_Force_Test").
+  - Methods Array: List of objects with:
+    - **Possible Problem**: Description of the issue (e.g., "Possible Problem").
+    - **Solution**: Recommended fix (e.g., "Solution").
+- **Usage**: Loaded into `AppState.troubleshooting` via `load_troubleshooting()`; incorporated into HTML reports for NG predictions.
 
 ## Key Concepts
 
