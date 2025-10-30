@@ -453,7 +453,8 @@ This section describes the dialogs that appear when **Auto Run** mode is enabled
 This section shows a sample of the **analysis report** generated in HTML format.
 
 
-[View Sample HTML Report]([LinktoHTMLreport](https://waiyan-tun.github.io/RCA/))
+[View Sample HTML Report](https://waiyan-tun.github.io/RCA)
+
 
 
 ## Author
