@@ -388,7 +388,7 @@ The application follows a modular design to separate concerns and maintain respo
 
 This section describes the **Configuration Settings** tab within the application.
 
-![Configuration Settings Screenshot](path/to/configuration-settings.png)
+![Configuration Settings Screenshot](RCA/Screenshoots/Configuration.png)
 
 ---
 
@@ -396,7 +396,7 @@ This section describes the **Configuration Settings** tab within the application
 
 This section describes the **Database Connection** and **Database Selection** tab within the application.
 
-![DB Connection Screenshot](path/to/db-connection.png)
+![DB Connection Screenshot](RCA/Screenshoots/DB_Connection.png)
 
 ---
 
@@ -405,7 +405,7 @@ This section describes the **Database Connection** and **Database Selection** ta
 This section describes the **Data Retrieval** tab within the application.  
 In this tab, users can select the tables and define the date range of data to be used for analysis.
 
-![Data Retrieval Screenshot](path/to/data-retrieval.png)
+![Data Retrieval Screenshot](RCA/Screenshoots/Data_Retrieval.png)
 
 ---
 
@@ -413,7 +413,7 @@ In this tab, users can select the tables and define the date range of data to be
 
 This section describes the **Data Summary** pop-up window, which displays a detailed summary of the retrieved data.
 
-![Data Summary Pop-up](path/to/data-summary.png)
+![Data Summary Pop-up](RCA/Screenshoots/Data_Summary.png)
 
 ---
 
@@ -422,7 +422,7 @@ This section describes the **Data Summary** pop-up window, which displays a deta
 This section describes the **Analysis** tab within the application.  
 This tab displays the list of tables to be analyzed and allows users to select the desired **model variant**.
 
-![Analysis Tab](path/to/analysis-tab.png)
+![Analysis Tab](RCA/Screenshoots/Analysis_Tab.png)
 
 ---
 
@@ -430,7 +430,7 @@ This tab displays the list of tables to be analyzed and allows users to select t
 
 This section describes the **Log** tab within the application, where system and analysis logs are displayed.
 
-![Log Screenshot](path/to/log-tab.png)
+![Log Screenshot](RCA/Screenshoots/Log.png)
 
 ---
 
@@ -444,7 +444,7 @@ This section describes the dialogs that appear when **Auto Run** mode is enabled
    - If the user **allows Auto Run**, a dialog appears showing logs during the automated run.
    - After Auto Run completes, the **HTML format report** is automatically opened in the default browser, and the program closes automatically.
 
-![Auto Run Dialog Screenshot](path/to/auto-run-dialog.png)
+![Auto Run Dialog Screenshot](RCA/Screenshoots/Auto-Run.png)
 
 ---
 
@@ -452,9 +452,8 @@ This section describes the dialogs that appear when **Auto Run** mode is enabled
 
 This section shows a sample of the **analysis report** generated in HTML format.
 
-![Sample HTML Report](path/to/sample-html-report.png)
 
-[View Sample HTML Report](LinktoHTMLreport)
+[View Sample HTML Report]([LinktoHTMLreport](https://waiyan-tun.github.io/RCA/))
 
 
 ## Author
