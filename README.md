@@ -11,6 +11,7 @@ The app features a tabbed interface for database configuration, data selection, 
 - **Database Connectivity**: Supports MySQL and SQLite databases.
 - **Data Retrieval**: Filters data by state, date range, and selected tables.
 - **Rule-Based Analysis**: Applies JSON-defined rules to predict outcomes (OK/NG) and identify root causes.
+- **Analysis without rules for new projects**: Programmed to do the analysis without the rules for the new projects which do not have have enought data to generate the rules. Instead of rules.json, user has to add features(column names) to count the Pass/Fail of each features and plot the top 5 columns with most fails count as the root causes.
 - **HTML Reports**: Generates reports with KPIs, embedded charts (pie/bar), and troubleshooting tables.
 - **Auto-Run Mode**: Automates data retrieval, analysis, and report generation based on saved configurations.
 - **Dialogs**: Provides `PreviewDialog` for tabular data previews and `VisualDialog` for chart visualizations.
@@ -147,9 +148,10 @@ The application follows a modular design to separate concerns and maintain respo
 - **Key Functions**:
   - `load_rules()`: Loads `rules.json` into `AppState.rules`, exiting on critical errors.
   - `load_troubleshooting()`: Loads `troubleshootings.json` into `AppState.troubleshooting`, validating structure and logging warnings for empty or invalid methods.
-- **Usage**: Initializes rules and troubleshooting data at startup.
+  - `load_features()`: Loads `featuress.json` into `AppState.features`.
+- **Usage**: Initializes rules or features and troubleshooting data at startup.
 
-### 8. `rule_analyzer_app.py`
+### 8.1 `rule_analyzer_app.py` for rule-based analyzer
 **Purpose**: Defines the main application window and core analysis/reporting logic.
 
 - **Key Classes**:
@@ -165,6 +167,27 @@ The application follows a modular design to separate concerns and maintain respo
     - **Key Methods**:
       - `update_for_new_data()`: Updates analysis tab with retrieved data.
       - `perform_analysis()`: Starts the analysis worker.
+      - `generate_html_report()`: Creates HTML reports with KPIs, embedded charts (base64 PNG), and troubleshooting tables.
+      - `perform_auto_run(config)`: Executes auto-run sequence.
+      - `save_html_report(...)`: Saves HTML report and optional data exports (CSV/XLSX).
+- **Usage**: Orchestrates the GUI, analysis, and reporting workflows.
+
+### 8.2 `rule_analyzer_app.py` for pre-defined features analysis
+**Purpose**: Defines the main application window and core analysis/reporting logic.
+
+- **Key Classes**:
+  - **AnalysisWorker** (inherits `QThread`):
+    - Runs rule-based analysis in the background.
+    - Emits signals for progress, logs, completion, and errors.
+    - Applies rules to rows, adding `Prediction`, `Root_Cause`, and `Match_Path` columns.
+  - **AutoRunWorker** (inherits `QThread`):
+    - Handles auto-run: connects to database, retrieves data, analyzes, and generates reports.
+    - Emits signals for logs, completion, and errors.
+  - **RuleAnalyzerApp** (inherits `QTabWidget`):
+    - Main window with tabs: Database Config, Data Selection, App Config, Analysis, Logs.
+    - **Key Methods**:
+      - `update_for_new_data()`: Updates analysis tab with retrieved data.
+      - `perform_analysis()`: Starts the analysis worker. Plotting method differs from rule-based as it use the pre-defined features to get the root causes count.
       - `generate_html_report()`: Creates HTML reports with KPIs, embedded charts (base64 PNG), and troubleshooting tables.
       - `perform_auto_run(config)`: Executes auto-run sequence.
       - `save_html_report(...)`: Saves HTML report and optional data exports (CSV/XLSX).
@@ -242,7 +265,18 @@ The application follows a modular design to separate concerns and maintain respo
     - Optional: Counts like "OK": number, "NG": number.
 - **Usage**: Loaded into `AppState.rules` via `load_rules()`; used in analysis to evaluate data rows.
 
-### 13. `troubleshootings.json`
+### 13. `features.json`
+**Purpose**: Defines features to count Pass/Fail in JSON format.
+
+- **Description**: This file structures features for different stations (e.g., "Station_1", "Station_2") and features (e.g., "Column_1", "Column_2"). The features are listed under each tables they belong to . The provided content includes dummy data with truncated rules for demonstration.
+- **Structure**:
+  - Top-level: Dictionary keyed by station names(Table Names) (e.g., "Station_1").
+  - **Features**: List of column names.
+  - Rule Object:
+    - **feature**: The data column to check Pass/Fail (e.g., "Current_Judge", "Hpatic Judge").
+- **Usage**: Loaded into `AppState.features` via `load_features()`; used in analysis to evaluate data rows.
+
+### 14. `troubleshootings.json`
 **Purpose**: Provides troubleshooting methods for features in stations in JSON format.
 
 - **Description**: This file maps stations to features, each with a list of possible problems and solutions. The provided content includes dummy data with repeated "Possible Problem" and "Solution" entries, some truncated for demonstration.
