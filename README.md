@@ -3,12 +3,12 @@ This is the automated root cause analyzer that can find the root causes of the g
 
 ## Overview
 
-**RuleAnalyzerApp** is a PyQt5-based graphical user interface (GUI) application designed for connecting to databases (MySQL or SQLite), retrieving data from selected tables, applying predefined rules for analysis, and generating HTML reports with key performance indicators (KPIs), visualizations, and troubleshooting information. The application supports automated runs based on configuration files and includes features for data filtering, rule-based predictions, root cause analysis, and data export options. It is built to handle large datasets efficiently, with a modular design for maintainability and extensibility.
+**RuleAnalyzerApp** is a PyQt5-based graphical user interface (GUI) application designed for connecting to databases (MySQL or SQL server), retrieving data from selected tables, applying predefined rules for analysis, and generating HTML reports with key performance indicators (KPIs), visualizations, and troubleshooting information. The application supports automated runs based on configuration files and includes features for data filtering, rule-based predictions, root cause analysis, and data export options. It is built to handle large datasets efficiently, with a modular design for maintainability and extensibility.
 
 The app features a tabbed interface for database configuration, data selection, application settings, analysis, and logging. Dialog windows enhance user interaction by providing previews of data and visualizations. It leverages **SQLAlchemy** for database interactions, **Pandas** for data manipulation, and **Matplotlib** for generating charts. Rules and troubleshooting data are loaded from JSON files, ensuring flexibility in defining analysis logic and solutions.
 
 ### Key Features
-- **Database Connectivity**: Supports MySQL and SQLite databases.
+- **Database Connectivity**: Supports MySQL and SQL Server databases.
 - **Data Retrieval**: Filters data by state, date range, and selected tables.
 - **Rule-Based Analysis**: Applies JSON-defined rules to predict outcomes (OK/NG) and identify root causes.
 - **Analysis without rules for new projects**: Programmed to do the analysis without the rules for the new projects which do not have have enought data to generate the rules. Instead of rules.json, user has to add features(column names) to count the Pass/Fail of each features and plot the top 5 columns with most fails count as the root causes.
@@ -41,7 +41,7 @@ The application follows a modular design to separate concerns and maintain respo
 
 - **Python**: 3.x
 - **PyQt5**: For GUI components and dialogs.
-- **SQLAlchemy**: For database connectivity (MySQL, SQLite).
+- **SQLAlchemy**: For database connectivity (MySQL, SQL server).
 - **Pandas**: For data manipulation and analysis.
 - **NumPy**: For numerical operations.
 - **Matplotlib**: For generating visualizations.
@@ -104,7 +104,7 @@ The application follows a modular design to separate concerns and maintain respo
     - Inputs: Host, port, user, password (hidden).
     - Buttons: Connect to server, select database from combo box, use database.
   - **Key Methods**:
-    - `connect_server()`: Connects to MySQL server, lists databases; falls back to local SQLite files if connection fails.
+    - `connect_server()`: Connects to MySQL server, lists databases; falls back to local server if connection fails.
     - `use_db()`: Sets the selected database as the active engine and updates the data tab.
   - **Usage**: Establishes the database connection for subsequent operations.
 
@@ -367,7 +367,7 @@ The application follows a modular design to separate concerns and maintain respo
 
 - **Database Connection Fails**:
   - Verify host, port, user, and password in `ConfigTab`.
-  - Ensure MySQL server is running or SQLite files are accessible.
+  - Ensure MySQL server is running or SQL server are accessible.
 - **No Tables Listed**:
   - Check database connection and refresh tables in `DataTab`.
 - **Analysis Errors**:
